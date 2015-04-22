@@ -1,0 +1,10 @@
+{
+  "name": "nw-demo",
+  "main": "App/Templates/index.html",
+  "node-remote": "somesource",
+  "window":
+  {
+	"toolbar": false
+  }
+	
+}

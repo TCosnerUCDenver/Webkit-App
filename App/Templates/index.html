@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app>
+	<head>
+    	<meta charset='UTF-8'>
+    	<script src="../../node_modules/angular/angular.min.js"></script>
+    	<title>CommercialTribe Automation GUI</title>
+   		<script>
+   			//Instantiate Gui
+				var nw = require('nw.gui');
+    		// Window Menu
+    			var windowMenu = new nw.Menu({
+        			type: 'menubar'
+    			});
+    		// Help Menu
+    			var helpMenu = new nw.Menu();
+    		// Add Help Menu to Window Menu
+    			windowMenu.append(new nw.MenuItem({
+        			label: 'Help',
+        			submenu: helpMenu
+    			}));
+    		// About sub-entry
+    			helpMenu.append(new nw.MenuItem({
+        			label: 'about',
+        			click: function(){
+            			alert( 'Selenium Webdriver Automation Test GUI' + 'Product of CommercialTribe, Inc.' + '\n' + 'Version 0.0' + '\n' + '2015' + '\n');
+        			}
+    			}));
+    		// Assign to window
+    			nw.Window.get().menu = windowMenu;
+    	</script>
+	</head>
+<body>
+	<h1>Hello World</h1>
+	<div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+</body>
+</html>
