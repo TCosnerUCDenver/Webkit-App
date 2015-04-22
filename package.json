@@ -4,7 +4,9 @@
   "node-remote": "somesource",
   "window":
   {
-	"toolbar": false
+	"toolbar": false,
+	"width": 1920,
+    "height": 1080
   }
 	
 }
